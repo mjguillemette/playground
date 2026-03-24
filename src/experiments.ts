@@ -9,7 +9,7 @@
  * That's it.
  */
 
-export type Contributor = "MG" | "MJ";
+export type Contributor = "MG" | "JR";
 
 export interface Experiment {
   id: string;
@@ -24,7 +24,7 @@ export interface Experiment {
 
 export const CONTRIBUTORS: Record<Contributor, { name: string; color: string }> = {
   MG: { name: "Mike G", color: "#818cf8" },
-  MJ: { name: "Mike J", color: "#34d399" },
+  JR: { name: "J R",    color: "#34d399" },
 };
 
 export const experiments: Experiment[] = [
@@ -37,5 +37,15 @@ export const experiments: Experiment[] = [
     contributors: ["MG"],
     path: "/experiments/r3f-scene",
     status: "stable",
+  },
+  {
+    id: "iso-board",
+    title: "Isometric Strategy Board",
+    description:
+      "Procedurally generated isometric terrain board. Stepped height levels, fBM noise map, orthographic camera with arrow-key pan, scroll zoom, and free-orbit toggle.",
+    tags: ["3D", "Isometric", "Procedural", "Game"],
+    contributors: ["MG", "JR"],
+    path: "/experiments/iso-board",
+    status: "wip",
   },
 ];
